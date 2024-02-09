@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Student Result Management System</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Result Management System</h2>
+        
+        <form id="resultForm" onsubmit="calculateResult(event)">
+            <label for="name">Student Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="subject1">Networking:</label>
+            <input type="number" id="subject1" name="subject1" min="0" max="100" required>
+
+            <label for="subject2">CPP:</label>
+            <input type="number" id="subject2" name="subject2" min="0" max="100" required>
+
+            <label for="subject3">Advance PHP:</label>
+            <input type="number" id="subject3" name="subject3" min="0" max="100" required>
+
+            <label for="subject4">Oprating System:</label>
+            <input type="number" id="subject4" name="subject4" min="0" max="100" required>
+
+            <button type="submit">Calculate Result</button>
+        </form>
+
+        <div id="resultOutput" class="hidden">
+            <h3>Result:</h3>
+            <p><strong>Name:</strong> <span id="resultName"></span></p>
+            <p><strong>Total Marks:</strong> <span id="totalMarks"></span></p>
+            <p><strong>Average:</strong> <span id="average"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
